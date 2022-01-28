@@ -34,7 +34,7 @@
 					<ul class="list-group">
 						<!--# ToDo item -->
 						<li v-for="(todo, index) in todos" class="d-flex pb-2">
-							<label @click="checkItem(index)" class="list-group-item flex-grow-1 rounded-start">
+							<label @click="checkItem(index)" :class="{'text-decoration-line-through': todo.check}" class="list-group-item flex-grow-1 rounded-start">
 								<i v-if="todo.check" class="bi bi-check-square"></i>
 								<i v-else class="bi bi-square"></i>
 								{{todo.text}}
