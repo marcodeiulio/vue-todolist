@@ -23,13 +23,19 @@
 		<main class="container p-3">
 			<div class="row justify-content-center">
 				<div class="col-7">
+					<div class="input-group mb-3">
+						<input id="add-input" type="text" class="form-control" placeholder="Add a fantastic new ToDo" v-model="newTodo">
+						<button class="btn btn-outline-primary" type="button" @click="addTodo">Add</button>
+					</div>
+				</div>
+				<div class="col-7">
 					<ul class="list-group">
 						<li v-for="(todo, index) in todos" class="d-flex pb-2">
 							<label class="list-group-item flex-grow-1 rounded-start">
 								<input class="form-check-input me-1" type="checkbox" value="">
 								{{todo.text}}
 							</label>
-							<button @click="removeTodo(index)" class="btn btn-outline-danger rounded-0 rounded-end" type="button" id="button-addon2">Delete</button>
+							<button @click="removeTodo(index)" class="btn btn-outline-danger rounded-0 rounded-end" type="button">Delete</button>
 						</li>
 					</ul>
 				</div>
