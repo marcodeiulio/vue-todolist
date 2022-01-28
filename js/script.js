@@ -5,9 +5,9 @@ const root = new Vue({
 	data: {
 		newTodo: '',
 		todos: [
-			{ text: 'Vue Link One', check: false },
-			{ text: 'Vue Link Two', check: false },
-			{ text: 'Vue Link Three', check: false },
+			{ text: 'Aggiungere pulsante "delete all"', check: false },
+			{ text: 'Aggiungere pulsante "check all"', check: false },
+			{ text: 'Aggiungere pulsante "uncheck all"', check: false },
 		],
 	},
 	methods: {
