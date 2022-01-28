@@ -36,13 +36,13 @@
 				<div class="col-7">
 					<!--# Input Form -->
 					<div class="input-group mb-3">
-						<input id="add-input" type="text" class="form-control" placeholder="Add a fantastic new ToDo" v-model="newTodo" @keyup.enter="addTodo">
+						<input id="add-input" type="text" class="form-control" placeholder="Add a fantastic new ToBoo" v-model="newTodo" @keyup.enter="addTodo">
 						<button class="btn btn-outline-primary" type="button" @click="addTodo">Add</button>
 					</div>
 				</div>
 			</div>
 			<div class="row justify-content-center">
-				<h3 v-if="!todos.length" class="text-center">How can you have <em>nothing </em> to do? 😉</h3>
+				<h3 v-if="!todos.length" class="text-center pt-5">How can you have <em>nothing </em> to do? 😉</h3>
 				<div class="col-7">
 					<ul class="list-group">
 						<!--# ToDo Item -->
