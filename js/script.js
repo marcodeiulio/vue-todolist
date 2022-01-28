@@ -5,9 +5,18 @@ const root = new Vue({
 	data: {
 		newTodo: '',
 		todos: [
-			{ text: 'Aggiungere pulsante "delete all"', check: false },
-			{ text: 'Aggiungere pulsante "check all"', check: false },
-			{ text: 'Aggiungere pulsante "uncheck all"', check: false },
+			{
+				text: 'Aggiungere pulsante "delete all"',
+				check: false,
+			},
+			{
+				text: 'Aggiungere pulsante "check all"',
+				check: false,
+			},
+			{
+				text: 'Aggiungere pulsante "uncheck all"',
+				check: false,
+			},
 		],
 	},
 	methods: {
@@ -21,6 +30,12 @@ const root = new Vue({
 		checkItem(index) {
 			this.todos[index].check = !this.todos[index].check;
 			console.log(this.todos[index].check);
+		},
+		checkAllItems() {
+			const todos = this.todos.map(obj => obj.check = true)
+		},
+		uncheckAllItems() {
+			const todos = this.todos.map(obj => obj.check = false)
 		},
 	},
 })

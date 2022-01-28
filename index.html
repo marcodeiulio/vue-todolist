@@ -24,10 +24,10 @@
 		<main class="container p-1">
 			<div class="row justify-content-center pb-3">
 				<div class="col d-flex justify-content-center">
-					<div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-						<input type="checkbox" class="btn-check" id="btncheck1"> <label class="btn btn-outline-success" for="btncheck1">Check all</label>
-						<input type="checkbox" class="btn-check" id="btncheck2"> <label class="btn btn-outline-warning" for="btncheck2">Uncheck all</label>
-						<input type="checkbox" class="btn-check" id="btncheck3"> <label class="btn btn-outline-danger" for="btncheck3">Delete all</label>
+					<div class="btn-group" role="group" aria-label="Basic outlined example">
+						<button type="button" class="btn btn-outline-success" @click="checkAllItems">Check all</button>
+						<button type="button" class="btn btn-outline-warning" @click="uncheckAllItems">Uncheck all</button>
+						<button type="button" class="btn btn-outline-danger">Delete all</button>
 					</div>
 				</div>
 			</div>
