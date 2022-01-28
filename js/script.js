@@ -9,4 +9,9 @@ const root = new Vue({
 			{ text: 'Vue Link Three', check: false },
 		],
 	},
+	methods: {
+		removeTodo(index) {
+			this.todos.splice(index, 1);
+		},
+	},
 })

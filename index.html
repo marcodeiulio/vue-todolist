@@ -24,12 +24,12 @@
 			<div class="row justify-content-center">
 				<div class="col-7">
 					<ul class="list-group">
-						<li v-for="todo in todos" class="d-flex pb-2">
+						<li v-for="(todo, index) in todos" class="d-flex pb-2">
 							<label class="list-group-item flex-grow-1 rounded-start">
 								<input class="form-check-input me-1" type="checkbox" value="">
 								{{todo.text}}
 							</label>
-							<button class="btn btn-outline-danger rounded-0 rounded-end" type="button" id="button-addon2">Delete</button>
+							<button @click="removeTodo(index)" class="btn btn-outline-danger rounded-0 rounded-end" type="button" id="button-addon2">Delete</button>
 						</li>
 					</ul>
 				</div>
