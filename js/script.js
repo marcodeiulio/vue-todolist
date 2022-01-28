@@ -37,5 +37,8 @@ const root = new Vue({
 		uncheckAllItems() {
 			const todos = this.todos.map(obj => obj.check = false)
 		},
+		removeAll() {
+			this.todos = [];
+		},
 	},
 })

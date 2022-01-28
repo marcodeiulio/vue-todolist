@@ -25,15 +25,16 @@
 			<div class="row justify-content-center pb-3">
 				<div class="col d-flex justify-content-center">
 					<div class="btn-group" role="group" aria-label="Basic outlined example">
+						<!--# Button Group -->
 						<button type="button" class="btn btn-outline-success" @click="checkAllItems">Check all</button>
 						<button type="button" class="btn btn-outline-warning" @click="uncheckAllItems">Uncheck all</button>
-						<button type="button" class="btn btn-outline-danger">Delete all</button>
+						<button type="button" class="btn btn-outline-danger" @click="removeAll">Delete all</button>
 					</div>
 				</div>
 			</div>
 			<div class="row justify-content-center">
 				<div class="col-7">
-					<!--# Input form -->
+					<!--# Input Form -->
 					<div class="input-group mb-3">
 						<input id="add-input" type="text" class="form-control" placeholder="Add a fantastic new ToDo" v-model="newTodo" @keyup.enter="addTodo">
 						<button class="btn btn-outline-primary" type="button" @click="addTodo">Add</button>
@@ -43,7 +44,7 @@
 			<div class="row justify-content-center">
 				<div class="col-7">
 					<ul class="list-group">
-						<!--# ToDo item -->
+						<!--# ToDo Item -->
 						<li v-for="(todo, index) in todos" class="d-flex pb-2">
 							<label @click="checkItem(index)" :class="{'text-decoration-line-through': todo.check}" class="list-group-item flex-grow-1 rounded-start">
 								<i v-if="todo.check" class="bi bi-check-square"></i>
