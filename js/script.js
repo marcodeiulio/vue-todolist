@@ -18,5 +18,9 @@ const root = new Vue({
 			if (this.newTodo.trim()) this.todos.push({ text: this.newTodo, check: false });
 			this.newTodo = '';
 		},
+		checkItem(index) {
+			this.todos[index].check = !this.todos[index].check;
+			console.log(this.todos[index].check);
+		},
 	},
 })
