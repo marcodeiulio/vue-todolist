@@ -45,9 +45,9 @@
 
 header img {
 	transform: rotate(0deg);
-	transition: transform 1s;
+	transition: transform 1.2s;
 }
 header figure:hover img {
 	transform: rotate(360deg);
-	transition: transform 1s;
+	transition: transform 1.2s;
 }
