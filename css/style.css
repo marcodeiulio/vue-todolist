@@ -15,3 +15,29 @@
 		width: 100%;
 	}
 }
+
+.animated-check {
+	animation: animated-check 1s;
+}
+
+@keyframes animated-check {
+	0% {
+		color: white;
+	}
+	100% {
+		color: black;
+	}
+}
+
+.animated-uncheck {
+	animation: animated-uncheck 1s;
+}
+
+@keyframes animated-uncheck {
+	0% {
+		color: white;
+	}
+	100% {
+		color: black;
+	}
+}

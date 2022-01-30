@@ -36,7 +36,7 @@
 				<div class="col-7">
 					<!--# Input Form -->
 					<div class="input-group mb-3">
-						<input id="add-input" type="text" class="form-control" placeholder="Add a fantastic new ToBoo" v-model="newTodo" @keyup.enter="addTodo">
+						<input id="add-input" type="text" class="form-control" placeholder="Add a fantastic new ToBoo" v-model="newTodo" @keyup.enter="addTodo" maxlength="75">
 						<button class="btn btn-outline-primary" type="button" @click="addTodo">Add</button>
 					</div>
 				</div>
@@ -48,9 +48,9 @@
 						<!--# ToDo Item -->
 						<li v-for="(todo, index) in todos" class="d-flex pb-2">
 							<label @click="checkItem(index)" class="list-group-item flex-grow-1 rounded-start">
-								<i v-if="todo.check" class="bi bi-check-square"></i>
-								<i v-else class="bi bi-square"></i>
-								<p class="position-relative d-inline-block">{{todo.text}} <span id="animated-div" :class="{'animated-line': todo.check}" class="position-absolute"></span></p>
+								<i v-if="todo.check" class="bi bi-check-square animated-check"></i>
+								<i v-else class="bi bi-square animated-uncheck"></i>
+								<p class="position-relative d-inline-block m-0">{{todo.text}} <span :class="{'animated-line': todo.check}" class="position-absolute"></span></p>
 							</label>
 							<button @click="removeTodo(index)" class="btn btn-outline-danger rounded-0 rounded-end" type="button">Delete</button>
 						</li>
