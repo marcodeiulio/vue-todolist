@@ -47,10 +47,10 @@
 					<ul class="list-group">
 						<!--# ToDo Item -->
 						<li v-for="(todo, index) in todos" class="d-flex pb-2">
-							<label @click="checkItem(index)" :class="{'text-decoration-line-through': todo.check}" class="list-group-item flex-grow-1 rounded-start">
+							<label @click="checkItem(index)" class="list-group-item flex-grow-1 rounded-start">
 								<i v-if="todo.check" class="bi bi-check-square"></i>
 								<i v-else class="bi bi-square"></i>
-								{{todo.text}}
+								<p class="position-relative d-inline-block">{{todo.text}} <span id="animated-div" :class="{'animated-line': todo.check}" class="position-absolute"></span></p>
 							</label>
 							<button @click="removeTodo(index)" class="btn btn-outline-danger rounded-0 rounded-end" type="button">Delete</button>
 						</li>

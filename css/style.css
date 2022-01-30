@@ -1,0 +1,17 @@
+.animated-line {
+	width: 100%;
+	height: 1.2px;
+	background-color: black;
+	top: 12.5px;
+	left: 0;
+	animation: line-width 1s 1;
+}
+
+@keyframes line-width {
+	0% {
+		width: 0%;
+	}
+	100% {
+		width: 100%;
+	}
+}
